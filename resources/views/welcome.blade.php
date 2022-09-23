@@ -9,6 +9,7 @@
         body{
             
             background: maroon;
+            /* overflow: hidden; */
         }
         .header{
             display: flex;
@@ -42,10 +43,9 @@
             <div class="article">
                 @foreach($articles as $value)
                 <div class="ind_article">
-                    <h1>{{$value['title']}}</h1>
+                    <a href="article/{{$value['id']}}"><h1>{{$value['title']}}</h1></a>
                     <p>{{$value['desc']}}</p>
                 </div>
-                    
                 @endforeach
             </div>
         </div>

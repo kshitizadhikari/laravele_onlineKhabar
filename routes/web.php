@@ -20,3 +20,10 @@ Route::get('/', function () {
         'articles' => Article::getAllArticles()
     ]);
 });
+
+Route::get('/article/{id}', function ($id) {
+    return view('article', [
+        'article' => Article::getOneArticle($id),
+                    
+    ]);
+});
