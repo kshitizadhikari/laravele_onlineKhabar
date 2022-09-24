@@ -22,7 +22,7 @@
         }
 
         public static function getOneArticle($id){
-            $articles = self::getAllArticles();
+            $articles = self::getAllArticles();  
 
             foreach($articles as $value){
                 if($value['id'] == $id){

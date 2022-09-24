@@ -15,8 +15,25 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            text-decoration: underline;
             font-size: 35px;
+            position: relative;
+        }
+
+        .title::after{
+            position: absolute;
+            content:"";
+            width: 0%;
+            height: 4px;
+            background-color: white;
+            left: 50%;
+            bottom: -10px;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .header :hover .title::after{
+            content: "";
+            width: 100%;
+            left: 0;
         }
 
         .ind_article{
@@ -35,8 +52,10 @@
     </style>
 </head>
 <body>
-    <div class="header" >   
-        <h1>{{$header}}</h1>    
+    <div class="header" >
+        <div class="title">  
+            <h1>{{$header}}</h1>    
+        </div>
     </div>
     <div class="main">
         <div class="main-container">
